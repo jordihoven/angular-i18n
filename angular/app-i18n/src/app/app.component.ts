@@ -8,6 +8,8 @@ import { TranslateService } from './translate.service';
 })
 export class AppComponent {
   title = 'TITLE';
+  savebtn = 'SAVE';
+  welcome = 'WELCOME';
 
   constructor(private translateService: TranslateService) {
     console.log(translateService.data);
