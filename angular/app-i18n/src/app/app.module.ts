@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TranslateService } from './translate.service';
 import { TranslatePipe } from './translate.pipe';
+import { ParagraphComponent } from './paragraph/paragraph.component';
 
 export function setupTranslateServiceFactory(
   service: TranslateService
@@ -13,7 +14,7 @@ export function setupTranslateServiceFactory(
 }
 
 @NgModule({
-  declarations: [AppComponent, TranslatePipe],
+  declarations: [AppComponent, TranslatePipe, ParagraphComponent],
   imports: [BrowserModule, HttpClientModule],
   providers: [
     TranslateService,

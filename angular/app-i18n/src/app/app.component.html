@@ -1,8 +1,15 @@
-<h1>{{ title | translate }} !</h1>
-<p>{{ welcome | translate }}</p>
-<button>{{ savebtn | translate}}</button>
+<!-- translated elements -->
+<h1>{{ content.title| translate }} !</h1>
+<p>{{ content.welcome| translate }}</p>
+<button>{{ content.savebtn| translate}}</button>
 
+<app-paragraph></app-paragraph>
+
+<!-- this is deprecated, does not work, so always shows the english translation -->
+<input placeholder="{{ 'content.inputPlaceholder' | translate }}" type="text">
+
+<!-- language switcher -->
 <div class="lang-switcher">
-  <button (click)="setLang('ua')">Nederlands</button>
-  <button (click)="setLang('en')">Engels</button>
+  <button (click)="setLang('nl')">Nederlands</button>
+  <button (click)="setLang('en')">English</button>
 </div>

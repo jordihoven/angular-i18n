@@ -14,12 +14,23 @@ button {
     padding: 8px 12px;
     border: 1px solid #e4e4e4;
     margin-right: 16px;
+    transition: all .3s ease-in-out;
 }
 
 button:hover {
     filter: brightness(95%);
+    cursor: pointer;
 }
 
 .lang-switcher {
     margin-top: 40px;
+}
+
+input {
+    background-color: white;
+    border-radius: 6px;
+    padding: 8px 12px;
+    border: 1px solid #e4e4e4;
+    transition: all .3s ease-in-out;
+    outline: none;
 }

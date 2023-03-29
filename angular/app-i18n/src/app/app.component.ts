@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from './translate.service';
+import { Content } from './content';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,8 @@ import { TranslateService } from './translate.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TITLE';
-  savebtn = 'SAVE';
-  welcome = 'WELCOME';
+
+  content: typeof Content = Content;
 
   constructor(private translateService: TranslateService) {
     console.log(translateService.data);

@@ -10,5 +10,9 @@
   "[json]": {
     "editor.formatOnSave": false
   },
-  "cSpell.words": ["lifecycle", "systemjs"]
+  "cSpell.words": [
+    "lifecycle",
+    "systemjs"
+  ],
+  "angular.enable-strict-mode-prompt": false
 }
