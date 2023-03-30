@@ -1,4 +1,4 @@
-export enum Content {
+export enum Translations {
     title = 'TITLE',
     savebtn = 'SAVE',
     welcome = 'WELCOME',

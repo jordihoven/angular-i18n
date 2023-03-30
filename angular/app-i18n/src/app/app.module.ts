@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TranslateService } from './translate.service';
 import { TranslatePipe } from './translate.pipe';
 import { ParagraphComponent } from './paragraph/paragraph.component';
+import { LangSwitcherComponent } from './lang-switcher/lang-switcher.component';
 
 export function setupTranslateServiceFactory(
   service: TranslateService
@@ -14,7 +15,7 @@ export function setupTranslateServiceFactory(
 }
 
 @NgModule({
-  declarations: [AppComponent, TranslatePipe, ParagraphComponent],
+  declarations: [AppComponent, TranslatePipe, ParagraphComponent, LangSwitcherComponent],
   imports: [BrowserModule, HttpClientModule],
   providers: [
     TranslateService,

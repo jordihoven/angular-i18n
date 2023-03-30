@@ -1,15 +1,12 @@
 <!-- translated elements -->
-<h1>{{ content.title| translate }} !</h1>
-<p>{{ content.welcome| translate }}</p>
-<button>{{ content.savebtn| translate}}</button>
+<h1>{{ 'title' | translate }} !</h1>
+<p>{{ 'welcome' | translate }}</p>
+<button>{{ 'save' | translate}}</button>
+<input [placeholder]=" 'input-placeholder' | translate " type="text">
+<!-- example of mistyped text -->
+<p>{{ 'mistyped tittlee' | translate}}</p>
 
+<!-- example of a component, with translated strings -->
 <app-paragraph></app-paragraph>
-
-<!-- this is deprecated, does not work, so always shows the english translation -->
-<input placeholder="{{ 'content.inputPlaceholder' | translate }}" type="text">
-
-<!-- language switcher -->
-<div class="lang-switcher">
-  <button (click)="setLang('nl')">Nederlands</button>
-  <button (click)="setLang('en')">English</button>
-</div>
+<!-- lang switcher component -->
+<app-lang-switcher></app-lang-switcher>
