@@ -1,0 +1,13 @@
+.lang-switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #E4E4E4;
+}
+
+.lang-switcher button {
+    width: 100%;
+}
