@@ -2,9 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppComponent } from './app.component';
+// pipes and services
 import { TranslateService } from './translate.service';
 import { TranslatePipe } from './translate.pipe';
+
+// components
+import { AppComponent } from './app.component';
 import { ParagraphComponent } from './paragraph/paragraph.component';
 import { LangSwitcherComponent } from './lang-switcher/lang-switcher.component';
 

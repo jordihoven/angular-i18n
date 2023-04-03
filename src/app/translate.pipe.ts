@@ -1,18 +1,24 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { TranslateService } from './translate.service';
 
-import { Translations } from './enums';
-
+// import { Translations } from '../enums/enums';
 @Pipe({
   name: 'translate',
   pure: false
 })
 export class TranslatePipe implements PipeTransform {
-
   constructor(private translate: TranslateService) {}
 
-  transform(key: Translations): any {
-    //return this.translate.data[key] || key;
-    return this.translate.data[key] || key.toString();
+  transform(key: string): any {
+    const keys = key.split('.');
+    let value = this.translate.data;
+    for (let i = 0; i < keys.length; i++) {
+      value = value[keys[i]];
+      if (!value) {
+        console.error("Non translated string");
+        break;
+      }
+    }
+    return value || key.toString();
   }
 }

@@ -1,12 +1,29 @@
-<!-- translated elements -->
-<h1>{{ 'title' | translate }} !</h1>
-<p>{{ 'welcome' | translate }}</p>
-<button>{{ 'save' | translate}}</button>
-<input [placeholder]=" 'input-placeholder' | translate " type="text">
-<!-- example of mistyped text -->
-<p>{{ 'mistyped tittlee' | translate}}</p>
+<!-- translation examples -->
+<section>
+    <h3>Translated elements</h3>
+    <h1>{{ 'title' | translate }} !</h1>
+    <p>{{ 'welcome' | translate }}</p>
+    <button>{{ 'save' | translate}}</button>
+    <input [placeholder]=" 'input-placeholder' | translate " type="text">
+</section>
+<section>
+    <h3>Mistyped or missing translations</h3>
+    <p>{{ 'titlee' | translate }}</p>
+    <p>{{ 'welkom' | translate }}</p>
+    <p>{{ 'safe' | translate}}</p>
+    <p>{{ 'button.addItem' | translate }}</p>
+</section>
+<section>
+    <h3>Nested json</h3>
+    <p>{{ 'text.succes' | translate }}</p>
+    <p>{{ 'text.deleteSucces' | translate }}</p>
+    <button> {{ 'button.save' | translate }}</button>
+    <button> {{ 'button.delete' | translate }}</button>
+    <button> {{ 'button.cancel' | translate }}</button>
+</section>
 
 <!-- example of a component, with translated strings -->
 <app-paragraph></app-paragraph>
+
 <!-- lang switcher component -->
 <app-lang-switcher></app-lang-switcher>
