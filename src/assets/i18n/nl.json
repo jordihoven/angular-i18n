@@ -1,9 +1,4 @@
 {
-  "button": {
-    "save": "Opslaan",
-    "delete": "Verwijderen",
-    "cancel": "Annuleren"
-  },
   "title": "Nederlandse vertaling geladen :)",
   "error": "Er is iets fout gegaan, probeer het later opnieuw...",
   "save": "Opslaan",
@@ -12,5 +7,10 @@
   "text": {
     "succes": "Item is toegevoegd",
     "deleteSucces": "Item is verwijderd"
+  },
+  "button": {
+    "save": "Opslaan",
+    "delete": "Verwijderen",
+    "cancel": "Annuleren"
   }
 }

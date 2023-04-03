@@ -1,9 +1,4 @@
 {
-  "button": {
-    "save": "Save",
-    "delete": "Delete",
-    "cancel": "Cancel"
-  },
   "title": "Loaded english translation :)",
   "error": "Something went wrong, try again later...",
   "save": "Save",
@@ -12,5 +7,10 @@
   "text": {
     "succes": "Item added",
     "deleteSucces": "Item deleted"
+  },
+  "button": {
+    "save": "Save",
+    "delete": "Delete",
+    "cancel": "Cancel"
   }
 }
