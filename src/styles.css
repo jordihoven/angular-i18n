@@ -22,10 +22,6 @@ button:hover {
     cursor: pointer;
 }
 
-.lang-switcher {
-    margin-top: 40px;
-}
-
 input {
     background-color: white;
     border-radius: 6px;
@@ -34,3 +30,9 @@ input {
     transition: all .3s ease-in-out;
     outline: none;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+  }
