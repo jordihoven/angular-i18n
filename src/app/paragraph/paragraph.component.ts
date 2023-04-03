@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { Translations } from '../enums';
+import { Translations } from '../enums';
 
 @Component({
   selector: 'app-paragraph',
@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ParagraphComponent {
 
-  // translations = Translations;
+  translations = Translations;
   
 }
