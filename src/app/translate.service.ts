@@ -9,22 +9,34 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class TranslateService {
   data: any = {}; //create an empty object...
+
+  // Add a configuration flag to determine whether to use the local files or REST API
+  useRestApi = false;
+
   constructor(private http: HttpClient) {}
 
   use(lang: string): Observable<any> {
+    
     const validLangs = ['en', 'nl']; // Array of valid language codes
     const langCode = validLangs.includes(lang) ? lang : 'en'; // Validate the lang parameter or use 'en' as default
-    const langPath = `assets/i18n/${langCode}.json`;
+    let langPath = `assets/i18n/${langCode}.json`;
 
-    const en = '642c269cebd26539d0a458b6';
-    const nl = '642c26afebd26539d0a458c0';
-    const validBins = [en, nl];
-    const binCode = validBins.includes(lang) ? lang : en;
+    // Conditionally use the REST API URL if the configuration flag is set
+    if (this.useRestApi) {
+      langPath = `https://api.jsonbin.io/v3/b/642c269cebd26539d0a458b6?meta=false`;
+      if (langCode === 'nl') {
+        langPath = `https://api.jsonbin.io/v3/b/642c26afebd26539d0a458c0?meta=false`;
+      }
+    }
 
-    const binPath = `https://api.jsonbin.io/v3/b/${binCode}?meta=false`;
+    // const en = '642c269cebd26539d0a458b6';
+    // const nl = '642c26afebd26539d0a458c0';
+    // const validBins = [en, nl];
+    // const binCode = validBins.includes(lang) ? lang : en;
+    // const binPath = `https://api.jsonbin.io/v3/b/${binCode}?meta=false`;
 
     // Use Angular's HttpClient to make an HTTP GET request to the language file
-    return this.http.get(binPath).pipe(
+    return this.http.get(langPath).pipe(
       map(response => {
         // If the request is successful, set the response data to the `data` property of the TranslateService instance
         this.data = response || {};
